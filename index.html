@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip The Coin</title>
+  </head>
+  <body>
+    <p>Welcome to Flip The Coin game!</p>
+    <p>The coin has been flipped. Make a choice -</p>
+
+    <button
+      onclick="
+        let randomNumber = Math.random();
+        if(randomNumber >= 0 && randomNumber < 0.5){
+            result = 'Heads';
+        }else{
+            result = 'Tails';
+        }
+
+        if(result === 'Heads'){
+            alert(`You Won! It's ${result}`);
+        }else{
+            alert(`You Lose! It's ${result}`);
+        }
+    "
+    >
+      Heads
+    </button>
+
+    <button
+      onclick="
+        let randomNumber = Math.random();
+        if(randomNumber >= 0 && randomNumber < 0.5){
+            result = 'Heads';
+        }else{
+            result = 'Tails';
+        }
+
+        if(result === 'Heads'){
+            alert(`You Lose! It's ${result}`);
+        }else{
+            alert(`You Won! It's ${result}`);
+        }
+    "
+    >
+      Tails
+    </button>
+  </body>
+</html>
