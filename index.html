@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flip The Coin</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <p>Welcome to Flip The Coin game!</p>
-    <p>The coin has been flipped. Make a choice -</p>
+    <p>The coin has been flipped! Make a choice -</p>
 
-    <button
-      onclick="
+    <div class="button-container">
+      <button
+        id="heads"
+        onclick="
         let randomNumber = Math.random();
         if(randomNumber >= 0 && randomNumber < 0.5){
             result = 'Heads';
@@ -24,12 +28,13 @@
             alert(`You Lose! It's ${result}`);
         }
     "
-    >
-      Heads
-    </button>
+      >
+        Heads
+      </button>
 
-    <button
-      onclick="
+      <button
+        id="tails"
+        onclick="
         let randomNumber = Math.random();
         if(randomNumber >= 0 && randomNumber < 0.5){
             result = 'Heads';
@@ -43,8 +48,9 @@
             alert(`You Won! It's ${result}`);
         }
     "
-    >
-      Tails
-    </button>
+      >
+        Tails
+      </button>
+    </div>
   </body>
 </html>
